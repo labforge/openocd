@@ -185,7 +185,8 @@ int arm_semihosting(struct target *target, int *retval)
 		if (arm->core_mode != ARM_MODE_SVC)
 			return 0;
 
-		if (is_armv7a(armv7a)) {
+		/* Ignore VBAR on Visconti CR4 */
+/*		if (is_armv7a(armv7a)) {
 			struct arm_dpm *dpm = armv7a->arm.dpm;
 
 			*retval = dpm->prepare(dpm);
@@ -201,7 +202,7 @@ int arm_semihosting(struct target *target, int *retval)
 			} else {
 				return 1;
 			}
-		}
+		}*/
 
 		/* Check for PC == 0x00000008 or 0xffff0008: Supervisor Call vector. */
 		r = arm->pc;
