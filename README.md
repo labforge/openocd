@@ -73,7 +73,7 @@ transport select jtag
 adapter speed 10000
 
 # Load Bottlenose configuration
-source [find board/labforge-bottlenose2.cfg]
+source [find board/labforge_bottlenose2.cfg]
 
 # Start SoC
 reset run
