@@ -68,9 +68,7 @@ sudo service udev reload
 ```
 # Use Flyswatter 2 probe
 source [find interface/ftdi/flyswatter2.cfg]
-# Configure JTAG clock
-# adapter speed 10000
-# Configure JTAG topology
+# Configure JTAG clock and topology
 transport select jtag
 adapter speed 10000
 
