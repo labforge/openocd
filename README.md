@@ -18,7 +18,7 @@ implementations between "our" Cortex-R4 and what was present in OpenOCD @ 0.11.
 ## Major differences
  * [ARM Cortex-R4 semihosting support](https://developer.arm.com/documentation/dui0471/g/Bgbjjgij)
  * Bootstrap files to support SWJ into Cortex-A53 and Cortex-R4 cores of the SoC,
-   see ```bottlenose2.cfg``` and ```tmpv770.cfg```.
+   see ```labforge-bottlenose2.cfg``` and ```tmpv770.cfg```.
 
 ## Bottlenose, AMPA, ICTN Jtag setup
  * Build OpenOCD with FTDI support, example
@@ -73,7 +73,7 @@ transport select jtag
 adapter speed 10000
 
 # Load Bottlenose configuration
-source [find board/bottlenose2.cfg]
+source [find board/labforge-bottlenose2.cfg]
 
 # Start SoC
 reset run
@@ -86,7 +86,11 @@ reset run
 Please note that in-line with [OpenOCDs license](./COPYING) this code and
 information is provided with no warranty. Should you modify or run non 
 Labforge code on one of our devices, we cannot guarantee the quality of 
-outcomes. Since voltage domains are configured at the boot-phase of our 
+outcomes, nor dedicate support resources. Please [contact us](http://labforge.ca/)
+for consulting inquires, or bootstrap support for custom platforms based on
+the AMPA SoM. 
+
+Since voltage domains are configured at the boot-phase of our 
 products, you could cause permanent damage to your device.
 
 ----
