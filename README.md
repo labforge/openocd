@@ -1,19 +1,20 @@
 # Labforge OpenOCD port
 
 This is a modified version of [OpenOCD-0.11](https://openocd.org/) 
-that adds support for the Toshiba TMPV770-series (aka. Visconti5), 
-that is used in [Labforge Bottlenose 2, ICTN, and AMPA products](http://labforge.ca/).
+that adds support for the Toshiba TMPV770-series (aka. Visconti5),
+which is used in [Labforge Bottlenose 2, ICTN, and AMPA products](http://labforge.ca/).
 
 Due to export issues, we could not procure the suggested 
 [debug probe](https://www.dts-insight.co.jp/product/ice-jtag/adviceluna2/index.html) 
-for the early tape-out and instead build our interfacing from scratch using
+for the early tape-out and instead build our interfacing using
 OpenOCD.
 
 Since some processor features vary widely from what other existing
-SoCs implementations offer in OpenOCD. We decided to fork OpenOCD for now, 
-rather than, providing an upstream changes. We are happy to assist anyone who
+SoCs implementations offer in OpenOCD. We decided to fork OpenOCD rather 
+than providing upstream changes. We are happy to assist anyone who
 would like to merge these upstream and reconcile the different semihosting 
-implementations between "our" Cortex-R4 and what was present in OpenOCD @ 0.11.
+implementations between "our" Cortex-R4 and what was present in 
+OpenOCD @ 0.11.
 
 ## Major differences
  * [ARM Cortex-R4 semihosting support](https://developer.arm.com/documentation/dui0471/g/Bgbjjgij)
@@ -92,6 +93,8 @@ the AMPA SoM.
 
 Since voltage domains are configured at the boot-phase of our 
 products, you could cause permanent damage to your device.
+
+See our [documentation](https://docs.labforge.ca/) for more information.
 
 ----
 Original [README](./README)
